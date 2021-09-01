@@ -14,6 +14,7 @@
 		F2192F3426D464070003E4DF /* Product_Hunt_iOS_Tutorial.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2192F3226D464070003E4DF /* Product_Hunt_iOS_Tutorial.xcdatamodeld */; };
 		F2192F3626D464070003E4DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2192F3526D464070003E4DF /* Assets.xcassets */; };
 		F2192F3926D464070003E4DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2192F3726D464070003E4DF /* LaunchScreen.storyboard */; };
+		F2B0BE0B26DFF5860077758B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B0BE0A26DFF5860077758B /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F2192F3526D464070003E4DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2192F3826D464070003E4DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2192F3A26D464070003E4DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2B0BE0A26DFF5860077758B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				F2192F3726D464070003E4DF /* LaunchScreen.storyboard */,
 				F2192F3A26D464070003E4DF /* Info.plist */,
 				F2192F3226D464070003E4DF /* Product_Hunt_iOS_Tutorial.xcdatamodeld */,
+				F2B0BE0A26DFF5860077758B /* Post.swift */,
 			);
 			path = "Product Hunt iOS Tutorial";
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				F2192F2A26D464070003E4DF /* AppDelegate.swift in Sources */,
 				F2192F3426D464070003E4DF /* Product_Hunt_iOS_Tutorial.xcdatamodeld in Sources */,
 				F2192F2C26D464070003E4DF /* SceneDelegate.swift in Sources */,
+				F2B0BE0B26DFF5860077758B /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
