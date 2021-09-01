@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Xuv-HN-ZZA">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Xuv-HN-ZZA" customClass="PostTableViewCell" customModule="Product_Hunt_iOS_Tutorial" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xuv-HN-ZZA" id="HAt-w2-KeM">
@@ -87,6 +87,13 @@
                                                 <constraint firstItem="wEF-O7-rpq" firstAttribute="leading" secondItem="HAt-w2-KeM" secondAttribute="leadingMargin" id="tzY-Qa-6VB"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentsCountLabel" destination="yjw-IO-KLI" id="cRy-c6-8lx"/>
+                                            <outlet property="nameLabel" destination="hcQ-0R-Boz" id="oyq-BK-qnm"/>
+                                            <outlet property="previewImageView" destination="CKR-yi-Zdk" id="P60-iX-fi9"/>
+                                            <outlet property="taglineLabel" destination="ecz-PJ-TsZ" id="zTH-tg-a0s"/>
+                                            <outlet property="votesCountLabel" destination="gUz-si-1sN" id="cGy-Ho-lAC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
