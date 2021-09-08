@@ -16,6 +16,7 @@
 		F2192F3926D464070003E4DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2192F3726D464070003E4DF /* LaunchScreen.storyboard */; };
 		F2B0BE0B26DFF5860077758B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B0BE0A26DFF5860077758B /* Post.swift */; };
 		F2B0BE0D26E003F40077758B /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B0BE0C26E003F40077758B /* PostTableViewCell.swift */; };
+		F2F3982026E95004002081BF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F3981F26E95004002081BF /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F2192F3A26D464070003E4DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2B0BE0A26DFF5860077758B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F2B0BE0C26E003F40077758B /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		F2F3981F26E95004002081BF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				F2192F3226D464070003E4DF /* Product_Hunt_iOS_Tutorial.xcdatamodeld */,
 				F2B0BE0A26DFF5860077758B /* Post.swift */,
 				F2B0BE0C26E003F40077758B /* PostTableViewCell.swift */,
+				F2F3981F26E95004002081BF /* NetworkManager.swift */,
 			);
 			path = "Product Hunt iOS Tutorial";
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				F2192F2E26D464070003E4DF /* FeedViewController.swift in Sources */,
 				F2192F2A26D464070003E4DF /* AppDelegate.swift in Sources */,
 				F2192F3426D464070003E4DF /* Product_Hunt_iOS_Tutorial.xcdatamodeld in Sources */,
+				F2F3982026E95004002081BF /* NetworkManager.swift in Sources */,
 				F2192F2C26D464070003E4DF /* SceneDelegate.swift in Sources */,
 				F2B0BE0B26DFF5860077758B /* Post.swift in Sources */,
 				F2B0BE0D26E003F40077758B /* PostTableViewCell.swift in Sources */,
