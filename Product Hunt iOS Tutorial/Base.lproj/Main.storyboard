@@ -93,7 +93,6 @@
                                             <outlet property="previewImageView" destination="CKR-yi-Zdk" id="P60-iX-fi9"/>
                                             <outlet property="taglineLabel" destination="ecz-PJ-TsZ" id="zTH-tg-a0s"/>
                                             <outlet property="votesCountLabel" destination="gUz-si-1sN" id="cGy-Ho-lAC"/>
-                                            <segue destination="Zeg-ds-ysP" kind="show" id="1yr-fc-iht"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -126,10 +125,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ffy-Lb-hNc">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="125" id="0Nj-kX-JSr" userLabel="commentCell" customClass="CommentTableViewCell" customModule="Product_Hunt_iOS_Tutorial" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="commentCell" rowHeight="125" id="0Nj-kX-JSr" userLabel="commentCell" customClass="CommentTableViewCell" customModule="Product_Hunt_iOS_Tutorial" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Nj-kX-JSr" id="3bW-Nv-oeU">

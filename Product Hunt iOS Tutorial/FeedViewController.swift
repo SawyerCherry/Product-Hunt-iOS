@@ -25,9 +25,14 @@ class FeedViewController: UIViewController {
         feedTableView.dataSource = self
         
         func updateFeed() {
-            networkManager.getPosts() { result in
-                self.posts = result
-            }
+           networkManager.getPosts() { result in
+               switch result {
+               case let .success(posts):
+                 self.posts = posts
+               case let .failure(error):
+                 print(error)
+               }
+           }
         }
         updateFeed()
     }
@@ -56,7 +61,7 @@ extension FeedViewController: UITableViewDataSource {
 // MARK: UITableViewDelegate
 extension FeedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let post = posts[indexPath.row]
         // Get the storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         // Get the commentsView from the storyboard
@@ -64,7 +69,7 @@ extension FeedViewController: UITableViewDelegate {
             return
         }
         // add mock comments
-        commentsView.comments = ["Blah blah blah!", "Good app.", "Wow."]
+        commentsView.postID = post.id
         navigationController?.pushViewController(commentsView, animated: true)
     }
 }

@@ -14,19 +14,36 @@ class CommentsViewController:
     @IBOutlet weak var commentsTableView: UITableView!
     
     
-    var comments: [String]! {
+    var comments: [Comment] = [] {
         didSet {
-            // TODO: fill in later when we have real data
+            commentsTableView.reloadData()
         }
     }
+    
+    var postID: Int!
+    
+    var networkManager = NetworkManager()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         commentsTableView.dataSource = self
         commentsTableView.delegate = self
+        updateComments()
     }
     
+    
+    func updateComments() {
+       // Similar to what we did for posts
+       networkManager.getComments(postID) { result in
+           switch result {
+           case let .success(comments):
+             self.comments = comments
+           case let .failure(error):
+             print(error)
+           }
+       }
+    }
 }
 
 // MARK: UITableViewDatasource
@@ -39,7 +56,7 @@ extension CommentsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "commentCell", for: indexPath) as! CommentTableViewCell
         
         let comment = comments[indexPath.row]
-        cell.commentTextView.text = comment
+        cell.commentTextView.text = comment.body
         return cell
     }
 }
