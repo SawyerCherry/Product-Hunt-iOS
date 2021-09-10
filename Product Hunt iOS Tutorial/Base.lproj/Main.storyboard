@@ -93,6 +93,7 @@
                                             <outlet property="previewImageView" destination="CKR-yi-Zdk" id="P60-iX-fi9"/>
                                             <outlet property="taglineLabel" destination="ecz-PJ-TsZ" id="zTH-tg-a0s"/>
                                             <outlet property="votesCountLabel" destination="gUz-si-1sN" id="cGy-Ho-lAC"/>
+                                            <segue destination="Zeg-ds-ysP" kind="show" id="1yr-fc-iht"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -114,7 +115,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="854" y="-85"/>
+            <point key="canvasLocation" x="938" y="-46"/>
+        </scene>
+        <!--Comments-->
+        <scene sceneID="vBN-i0-9qH">
+            <objects>
+                <viewController storyboardIdentifier="commentsView" id="Zeg-ds-ysP" customClass="CommentsViewController" customModule="Product_Hunt_iOS_Tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zhi-ha-fr1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ffy-Lb-hNc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="125" id="0Nj-kX-JSr" userLabel="commentCell" customClass="CommentTableViewCell" customModule="Product_Hunt_iOS_Tutorial" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="125"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Nj-kX-JSr" id="3bW-Nv-oeU">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jav-Yy-JcX" userLabel="Comments Text View">
+                                                    <rect key="frame" x="15" y="15" width="384" height="95"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="jav-Yy-JcX" secondAttribute="trailing" constant="15" id="ISE-YS-20N"/>
+                                                <constraint firstAttribute="bottom" secondItem="jav-Yy-JcX" secondAttribute="bottom" constant="15" id="WFk-qB-xDP"/>
+                                                <constraint firstItem="jav-Yy-JcX" firstAttribute="leading" secondItem="3bW-Nv-oeU" secondAttribute="leading" constant="15" id="ose-bg-lAJ"/>
+                                                <constraint firstItem="jav-Yy-JcX" firstAttribute="top" secondItem="3bW-Nv-oeU" secondAttribute="top" constant="15" id="vbP-4k-IBg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentTextView" destination="jav-Yy-JcX" id="Vh9-lm-Z9H"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Uup-7U-0Ap"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ffy-Lb-hNc" firstAttribute="top" secondItem="Uup-7U-0Ap" secondAttribute="top" id="7Rg-4q-1QE"/>
+                            <constraint firstItem="ffy-Lb-hNc" firstAttribute="leading" secondItem="Uup-7U-0Ap" secondAttribute="leading" id="Z1h-Ju-kaj"/>
+                            <constraint firstItem="Uup-7U-0Ap" firstAttribute="bottom" secondItem="ffy-Lb-hNc" secondAttribute="bottom" id="aNR-2H-Pa0"/>
+                            <constraint firstItem="Uup-7U-0Ap" firstAttribute="trailing" secondItem="ffy-Lb-hNc" secondAttribute="trailing" id="cTI-W9-r8R"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Comments" id="SLN-7Z-afU"/>
+                    <connections>
+                        <outlet property="commentsTableView" destination="ffy-Lb-hNc" id="ssK-4d-F6d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="daI-YD-cLq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1755" y="-56"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Tt-dr-INv">
@@ -136,6 +197,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
